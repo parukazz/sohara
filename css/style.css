@@ -9,6 +9,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -85,6 +89,8 @@ a {
   /* typo */
   --head-font: 'Urbanist', sans-serif;
   --base-font: 'Satoshi', sans-serif;
+
+  --shadow: 0px 16px 32px -4px rgba(12, 12, 13, 0.1);
 }
 
 body {
@@ -92,7 +98,7 @@ body {
 }
 
 .bg-body {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: -10;
   height: 100%;
@@ -596,4 +602,105 @@ h3.title-section {
 .card-white .btn-white {
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
+}
+
+/* Testimonial */
+#testimonial {
+  width: 100%;
+  margin-block: 140px;
+}
+
+#testimonial .title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+#testimonial .title-box span {
+  font-family: var(--base-font);
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+#testimonial .testi-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+#testimonial .testi-item {
+  display: flex;
+  gap: 20px;
+  background-color: var(--white);
+  padding-inline: 20px;
+  padding-block: 20px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  align-items: center;
+}
+
+#testimonial .testi-item .testi-image {
+  width: 200px;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+#testimonial .testi-item .testi-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#testimonial .testi-item .testi-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  padding-block: 10px;
+}
+
+#testimonial .testi-item .testi-content .star {
+  display: flex;
+  gap: 6px;
+}
+
+#testimonial .testi-item .testi-content .star img {
+  width: 17px;
+}
+
+#testimonial .testi-item .testi-content .content-value {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  justify-content: space-around;
+}
+
+#testimonial .testi-item .testi-content .content-value p {
+  font-family: var(--base-font);
+  font-size: 14px;
+  line-height: 28px;
+}
+
+#testimonial .testi-item .testi-content .content-value p.testi,
+#testimonial .testi-item .testi-content .content-value .user-info p.role {
+  color: var(--gray-light);
+}
+
+#testimonial .testi-item .testi-content .content-value .user-info {
+  display: flex;
+  gap: 10px;
+}
+
+#testimonial .testi-item .testi-content .content-value .user-info p {
+  font-weight: 700;
+}
+
+#testimonial .testi-item .testi-content .content-value .user-info p.name {
+  color: var(--black);
 }
