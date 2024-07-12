@@ -360,11 +360,15 @@ h3.title-section {
 
 #shortlink .result-url {
   width: 100%;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 20px;
+}
+
+#shortlink .active-flex {
+  display: flex;
 }
 
 #shortlink .result-url .result-content {
